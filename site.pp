@@ -2,7 +2,7 @@ node default {
     # This is where you can declare classes for all nodes.
 
     if $osfamily =='Windows' {
-        Class['install_webpi'] -> Class['install_iis'] -> Class['decode_website']
+        Class['install_webpi'] -> Class['install_iis'] -> Class['add_website']
         include install_webpi, install_iis, decode_website
     }
 }
